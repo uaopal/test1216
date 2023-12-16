@@ -1,10 +1,10 @@
 
-let windowwidth, windowheight;
+//let windowwidth, windowheight;
 let stars=[];
 let factor=100;
 let speedSlider;
 function setup() {
-  createCanvas(width, height);
+  createCanvas(windowWidth, windowHeight);
   speedSlider=createSlider(0,20,5,0.1);
   for(let i=0;i<500;i++){
     stars[i] =createVector(
@@ -26,7 +26,7 @@ function draw() {
     let y=star.y/star.z;
     let px=star.x/star.pz;
     let py=star.y/star.pz;
-    let d=map(star.z,0,400,1,10);
+    let d=map(star.z,0,400,10,1);
     //textSize(d*5);
     //text("*",x,y);
     circle(x,y,d);       
